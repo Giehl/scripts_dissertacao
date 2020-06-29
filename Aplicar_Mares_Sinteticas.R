@@ -22,7 +22,7 @@ time1<-seq(x1[1], x1[2], by = "5 min")
 
 # Arquivo 2: 17/10/2002 até 10/10/2006 ---------------------------------------------------------------------------------------
 
-file2='Link do diretório do arquivo 1 com dados maregráficos amostrados com intervalos de 2,7,12.txt'
+file2='Link do diretório do arquivo 2 com dados maregráficos amostrados com intervalos de 2,7,12.txt'
 v2 <-read.table(file2, header = FALSE, sep = "", dec = ".")
 nl2=nrow(v2['V1'])
 elev2 <- as.numeric(unlist(v2['V3']))
@@ -33,7 +33,7 @@ time2<-seq(xx2[1], xx2[2], by = "5 min")
 
 # Arquivo 3: 10/10/2006 até 31/12/2015 --------------------------------------------------------------------------------------
 
-file3='/home/samo/Documentos/00_Qualificação/R/Dados_maregraficos/Juntados/2_10_10_2006_to_31_12_2015.txt'
+file3='Link do diretório do arquivo 3 com dados maregráficos amostrados com intervalos de 5,10,15.txt''
 v3 <-read.table(file3, header = FALSE, sep = "", dec = ".")
 nl3=nrow(v3['V1'])
 elev3 <- as.numeric(unlist(v3['V3']))
@@ -113,7 +113,7 @@ MS2=predict(tide,time_MS2)
 # Salvar os dados produzidos pela maré sintética para o período entre 17/10/2002-00:00:00 e 10/10/2006-12:20:00 com o intervalo de 0,5,10,15----------------------------------------------------------------------------------------------------------------------
 
 df1 <- data.frame(Dia_UTC=format(time_MS2, "%d/%m/%Y"), Hora_UTC=format(time_MS2, "%H:%M:%S"), SeaLevel = MS2)
-write.table(df1,'/home/samo/Documentos/00_Qualificação/R/Dados_maregraficos/Dados_sem_gap/17_10_2002_to_10_10_2006.txt', row.names = FALSE, col.names=FALSE, quote=FALSE)
+write.table(df1,'Link do diretório para salvar os dados sem gaps.txt'', row.names = FALSE, col.names=FALSE, quote=FALSE)
 
 # Salvar todos os dados com os gaps preenchidos -------------------------------------------------------------------------------------
 
